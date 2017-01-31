@@ -107,74 +107,75 @@ static const struct {
 	{ 35, "badvaddr", REG_TYPE_INT, NULL, "org.gnu.gdb.mips.cp0", 0 },
 	{ 36, "cause", REG_TYPE_INT, NULL, "org.gnu.gdb.mips.cp0", 0 },
 	{ 37, "pc", REG_TYPE_INT, NULL, "org.gnu.gdb.mips.cpu", 0 },
+        { 38, "guestctl1", REG_TYPE_INT, NULL, "org.gnu.gdb.mips.cp0", 0 },
 
-	{ 38,  "f0", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 39,  "f0", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 39,  "f1", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 40,  "f1", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 40,  "f2", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 41,  "f2", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 41,  "f3", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 42,  "f3", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 42,  "f4", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 43,  "f4", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 43,  "f5", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 44,  "f5", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 44,  "f6", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 45,  "f6", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 45,  "f7", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 46,  "f7", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 46,  "f8", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 47,  "f8", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 47,  "f9", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 48,  "f9", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 48, "f10", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 49, "f10", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 49, "f11", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 50, "f11", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 50, "f12", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 51, "f12", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 51, "f13", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 52, "f13", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 52, "f14", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 53, "f14", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 53, "f15", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 54, "f15", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 54, "f16", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 55, "f16", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 55, "f17", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 56, "f17", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 56, "f18", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 57, "f18", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 57, "f19", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 58, "f19", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 58, "f20", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 59, "f20", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 59, "f21", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 60, "f21", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 60, "f22", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 61, "f22", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 61, "f23", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 62, "f23", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 62, "f24", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 63, "f24", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 63, "f25", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 64, "f25", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 64, "f26", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 65, "f26", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 65, "f27", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 66, "f27", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 66, "f28", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 67, "f28", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 67, "f29", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 68, "f29", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 68, "f30", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 69, "f30", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 69, "f31", REG_TYPE_IEEE_SINGLE, NULL,
+	{ 70, "f31", REG_TYPE_IEEE_SINGLE, NULL,
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 70, "fcsr", REG_TYPE_INT, "float",
+	{ 71, "fcsr", REG_TYPE_INT, "float",
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
-	{ 71, "fir", REG_TYPE_INT, "float",
+	{ 72, "fir", REG_TYPE_INT, "float",
 		"org.gnu.gdb.mips.fpu", MIPS32_GDB_DUMMY_FP_REG },
 };
 
@@ -406,7 +407,7 @@ int mips32_save_context(struct target *target)
 				}
 
 				/* read core registers */
-				retval = mips32_pracc_read_fpu_regs(ejtag_info, (uint32_t *)(&mips32->core_regs[38]));
+				retval = mips32_pracc_read_fpu_regs(ejtag_info, (uint32_t *)(&mips32->core_regs[39]));
 				if (retval != ERROR_OK)
 					LOG_INFO("mips32->read_core_reg failed");
 
@@ -432,7 +433,7 @@ int mips32_save_context(struct target *target)
 			}
 
 			/* read core registers */
-			retval = mips32_pracc_read_fpu_regs(ejtag_info, (uint32_t *)(&mips32->core_regs[38]));
+			retval = mips32_pracc_read_fpu_regs(ejtag_info, (uint32_t *)(&mips32->core_regs[39]));
 			if (retval != ERROR_OK)
 				LOG_INFO("mips32->read_fpu_reg failed: status: 0x%x, tmp_status: 0x%x", status, tmp_status);
 			
@@ -441,7 +442,7 @@ int mips32_save_context(struct target *target)
 				LOG_DEBUG("writing status register failed");
 		}
 
-		for (i = 38; i < MIPS32_NUM_REGS; i++) {
+		for (i = 39; i < MIPS32_NUM_REGS; i++) {
 			if (mips32->core_cache->reg_list[i].valid) {
 				retval = mips32->read_core_reg(target, i);
 				if (retval != ERROR_OK) {
@@ -531,7 +532,7 @@ int mips32_restore_context(struct target *target)
 				}
 
 				/* read core registers */
-				retval = mips32_pracc_write_fpu_regs(ejtag_info, (uint32_t *)(&mips32->core_regs[38]));
+				retval = mips32_pracc_write_fpu_regs(ejtag_info, (uint32_t *)(&mips32->core_regs[39]));
 				if (retval != ERROR_OK)
 					LOG_INFO("mips32->read_core_reg failed");
 
@@ -553,7 +554,7 @@ int mips32_restore_context(struct target *target)
 
 
 				/* read core registers */
-				retval = mips32_pracc_write_fpu_regs(ejtag_info, (uint32_t *)(&mips32->core_regs[38]));
+				retval = mips32_pracc_write_fpu_regs(ejtag_info, (uint32_t *)(&mips32->core_regs[39]));
 				if (retval != ERROR_OK)
 					LOG_INFO("mips32->read_core_reg failed");
 
@@ -1611,6 +1612,12 @@ int mips32_cp0_command(struct command_invocation *cmd)
 										mips32->core_regs[CACHE_REG_PC] = value;
 										buf_set_u32(mips32->core_cache->reg_list[CACHE_REG_PC].value, 0, 32, value);
 										mips32->core_cache->reg_list[CACHE_REG_PC].dirty = 1;
+									} else {/* guestctl1 ? Update cached  */
+										if ((mips32_cp0_regs[i].reg == C0_GUESTCTL1) && (mips32_cp0_regs[i].sel == 4)) {
+											mips32->core_regs[CACHE_REG_GUESTCTL1] = value;
+											buf_set_u32(mips32->core_cache->reg_list[CACHE_REG_GUESTCTL1].value, 0, 32, value);
+											mips32->core_cache->reg_list[CACHE_REG_GUESTCTL1].dirty = 1;
+										}
 									}
 
 							retval = mips32_pracc_cp0_write(ejtag_info, value, mips32_cp0_regs[i].reg, mips32_cp0_regs[i].sel);
@@ -1658,6 +1665,11 @@ int mips32_cp0_command(struct command_invocation *cmd)
 					if ((cp0_reg == C0_DEPC) && (cp0_sel == 0)) {
 						mips32->core_regs[CACHE_REG_PC] = value;
 						mips32->core_cache->reg_list[CACHE_REG_PC].dirty = 1;
+					}  else {/* guestctl1 ? Update cached */
+						if ((cp0_reg == C0_GUESTCTL1) && (cp0_sel == 4)) {
+							mips32->core_regs[CACHE_REG_GUESTCTL1] = value;
+							mips32->core_cache->reg_list[CACHE_REG_GUESTCTL1].dirty = 1;
+						}
 					}
 
 			retval = mips32_pracc_cp0_write(ejtag_info, value, cp0_reg, cp0_sel);
@@ -1792,7 +1804,9 @@ COMMAND_HANDLER(mips32_handle_cpuinfo_command)
 		}
 
 		info.vzGuestIdWidth = width;
-   }
+		
+		LOG_USER ("VZ Guest ID Width: %d", info.vzGuestIdWidth);
+	}
 
 	/* MIPS SIMD Architecture (MSA) */
 	info.msa = (config3 & 0x10000000) ? 1 : 0;

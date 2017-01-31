@@ -70,17 +70,18 @@ enum {
 	MIPS32_R5 = 5,
 	MIPS32_R25 = 25,
 	MIPS32_PC = 37,
-	MIPS32_FIR = 71,
+	MIPS32_FIR = 72,
 	MIPS32NUMCOREREGS
 };
 
 #define CACHE_REG_STATUS 32
 #define CACHE_REG_CAUSE 36
 #define CACHE_REG_PC 37
+#define CACHE_REG_GUESTCTL1 38
 
 #define MIPS32NUMDSPREGS 9
 
-#define MIPS32NUMCP0REGS 104
+#define MIPS32NUMCP0REGS 105
 
 /* Bit Mask indicating CP0 register supported by this core */
 #define	MIPS_CP0_MK4		0x0001
@@ -135,6 +136,7 @@ static const struct {
 	{8, 2, "badinstrp", MIPS_CP0_mAPTIV_uC | MIPS_CP0_mAPTIV_uP},
 	{9, 0, "count", MIPS_CP0_iAPTIV | MIPS_CP0_mAPTIV_uC | MIPS_CP0_mAPTIV_uP | MIPS_CP0_MK4},
 	{10, 0, "entryhi", MIPS_CP0_iAPTIV | MIPS_CP0_mAPTIV_uP},
+        {10, 4, "guestctl1", MIPS_CP0_iAPTIV | MIPS_CP0_mAPTIV_uP | MIPS_CP0_mAPTIV_uP | MIPS_CP0_MK4},
 	{11, 0, "compare", MIPS_CP0_iAPTIV | MIPS_CP0_mAPTIV_uC | MIPS_CP0_mAPTIV_uP | MIPS_CP0_MK4},
 	{12, 0, "status", MIPS_CP0_iAPTIV | MIPS_CP0_mAPTIV_uC | MIPS_CP0_mAPTIV_uP | MIPS_CP0_MK4},
 	{12, 1, "intctl", MIPS_CP0_iAPTIV | MIPS_CP0_mAPTIV_uC | MIPS_CP0_mAPTIV_uP | MIPS_CP0_MK4},
@@ -530,6 +532,7 @@ struct mips32_algorithm {
 #define C0_COUNT		9
 #define C0_ENTRYHI		10
 #define C0_TLBHI		10
+#define C0_GUESTCTL1            10
 #define C0_COMPARE		11
 #define C0_STATUS		12
 #define C0_SR			12
