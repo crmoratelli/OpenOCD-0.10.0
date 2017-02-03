@@ -1384,6 +1384,8 @@ static int gdb_read_memory_packet(struct connection *connection,
 	buffer = malloc(len);
 
 	LOG_DEBUG("addr: 0x%8.8" PRIx32 ", len: 0x%8.8" PRIx32 "", addr, len);
+	
+	addr += target->guest_offset;
 
 	retval = target_read_buffer(target, addr, len, buffer);
 
@@ -1455,6 +1457,8 @@ static int gdb_write_memory_packet(struct connection *connection,
 
 	if (unhexify(buffer, separator, len) != len)
 		LOG_ERROR("unable to decode memory packet");
+	
+	addr += target->guest_offset;
 
 	retval = target_write_buffer(target, addr, len, buffer);
 

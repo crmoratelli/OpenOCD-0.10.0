@@ -5595,6 +5595,27 @@ static int jim_target_create(Jim_Interp *interp, int argc, Jim_Obj *const *argv)
 	return target_create(&goi);
 }
 
+COMMAND_HANDLER(handle_guest_offset_command)
+{
+	struct target *target = get_current_target(CMD_CTX);
+
+	if (target->state != TARGET_HALTED) {
+		LOG_INFO("target not halted !!");
+		return ERROR_FAIL;
+	}
+
+	if (CMD_ARGC == 1)
+		COMMAND_PARSE_NUMBER(uint, CMD_ARGV[0], target->guest_offset);
+	else if (CMD_ARGC > 1)
+		return ERROR_COMMAND_SYNTAX_ERROR;
+
+	command_print(CMD_CTX, "guest_offset: 0x%x", target->guest_offset);
+
+	return ERROR_OK;
+
+}
+
+
 static const struct command_registration target_subcommand_handlers[] = {
 	{
 		.name = "init",
@@ -5636,6 +5657,14 @@ static const struct command_registration target_subcommand_handlers[] = {
 		.usage = "targetname1 targetname2 ...",
 		.help = "gather several target in a smp list"
 	},
+	{
+		.name = "guest_offset",
+		.handler = handle_guest_offset_command,
+		.mode = COMMAND_EXEC,
+		.help = "Guest memory offset.",
+		.usage = "addr",
+	},
+	
 
 	COMMAND_REGISTRATION_DONE
 };

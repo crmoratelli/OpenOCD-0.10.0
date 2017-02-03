@@ -199,6 +199,9 @@ struct target {
 
 	/* file-I/O information for host to do syscall */
 	struct gdb_fileio_info *fileio_info;
+	
+	/* Address offset for debug of guest on the prplHypersor */
+	uint32_t guest_offset;
 };
 
 struct target_list {
@@ -669,6 +672,7 @@ int target_write_u64(struct target *target, uint64_t address, uint64_t value);
 int target_write_u32(struct target *target, uint32_t address, uint32_t value);
 int target_write_u16(struct target *target, uint32_t address, uint16_t value);
 int target_write_u8(struct target *target, uint32_t address, uint8_t value);
+uint32_t target_get_guest_offset(void);
 
 /* Issues USER() statements with target state information */
 int target_arch_state(struct target *target);
