@@ -9,7 +9,6 @@
 *.a
 *.lo
 *.la
-*.in
 
 # generated source files
 src/jtag/minidriver_imp.h
@@ -62,7 +61,6 @@ aclocal.m4
 autom4te.cache
 compile
 config.*
-configure
 depcomp
 doxygen
 doxygen.log
